@@ -53,14 +53,14 @@ citiesRef.doc('BJ').set({
         console.log('Error getting document:', error);
     });
 
-    db.collection("cities").where("capital", "==", true)
+    db.collection('cities').where('capital', '==', true)
     .get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
+            console.log(doc.id, ' => ', doc.data());
         });
     })
     .catch(function(error) {
-        console.log("Error getting documents: ", error);
+        console.log('Error getting documents: ', error);
     });
